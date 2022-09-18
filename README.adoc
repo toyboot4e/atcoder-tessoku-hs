@@ -30,7 +30,7 @@ Power..
 | link:./b31/Main.hs[b31] | link:./b32/Main.hs[b32] | link:./b33/Main.hs[b33] | link:./b34/Main.hs[b34] | b35 | link:./b36/Main.hs[b36] | link:./b37/Main.hs[b37] | link:./b38/Main.hs[b38] | link:./b39/Main.hs[b39] | link:./b40/Main.hs[b40]
 | link:./b41/Main.hs[b41] | link:./b42/Main.hs[b42] | link:./b43/Main.hs[b43] | link:./b44/Main.hs[b44] | link:./b45/Main.hs[b45] | b46 | b47 | b48 | b49 | b50 
 | link:./b51/Main.hs[b51] | link:./b52/Main.hs[b52] | b53 | link:./b54/Main.hs[b54] | link:./b55/Main.hs[b55] | link:./b56/Main.hs[b56] | link:./b57/Main.hs[b57] | link:./b58/Main.hs[b58] | link:./b59/Main.hs[b59] | b60
-| link:./b61/Main.hs[b61] | link:./b62/Main.hs[b62] | link:./b63/Main.hs[b63] | link:./b64/Main.hs[b64] | link:./b65/Main.hs[b65] | link:./b66/Main.hs[b66] | link:./b67/Main.hs[b67] | link:./b68/Main.hs[b68] | link:./b69/Main.hs[b69]
+| link:./b61/Main.hs[b61] | link:./b62/Main.hs[b62] | link:./b63/Main.hs[b63] | link:./b64/Main.hs[b64] | link:./b65/Main.hs[b65] | link:./b66/Main.hs[b66] | link:./b67/Main.hs[b67] | link:./b68/Main.hs[b68] | link:./b69/Main.hs[b69] |
 |===
 
 .C
