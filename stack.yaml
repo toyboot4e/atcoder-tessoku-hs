@@ -1,0 +1,6 @@
+system-ghc: true
+resolver: lts-16.11
+packages:
+- .
+extra-deps:
+- repa-3.4.1.4
