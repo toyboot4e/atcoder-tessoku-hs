@@ -1,2 +1,4 @@
-= https://atcoder.jp/contests/tessoku-book
+= https://atcoder.jp/contests/tessoku-book[atcoder.jp/contents/tessoku-book]
+
+Power..
 
