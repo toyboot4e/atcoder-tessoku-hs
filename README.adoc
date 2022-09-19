@@ -2,9 +2,19 @@
 
 Power..
 
+== Libraries
+
+- base-4.13
+  - https://hackage.haskell.org/package/base-4.13.0.0/docs/Data-Bits.html[Data.Bits]
+
+- lts-16.1
+  - https://www.stackage.org/lts-16.11/package/array-0.5.4.0[array]
+  - https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0[bytestring]
+  - https://www.stackage.org/lts-16.11/package/vector-0.12.1.2[vector]
+
 == Progress
 
-- A: 4 / 77
+- A: 6 / 77
 - B: 0 / 69
 - C: 0 / 20
 
