@@ -1,2 +1,454 @@
 cradle:
   stack:
+    - path: "./a01/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a01-exe"
+
+    - path: "./a02/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a02-exe"
+
+    - path: "./a03/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a03-exe"
+
+    - path: "./a04/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a04-exe"
+
+    - path: "./a05/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a05-exe"
+
+    - path: "./a06/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a06-exe"
+
+    - path: "./a07/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a07-exe"
+
+    - path: "./a08/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a08-exe"
+
+    - path: "./a09/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a09-exe"
+
+    - path: "./a10/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a10-exe"
+
+    - path: "./a11/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a11-exe"
+
+    - path: "./a12/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a12-exe"
+
+    - path: "./a13/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a13-exe"
+
+    - path: "./a14/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a14-exe"
+
+    - path: "./a15/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a15-exe"
+
+    - path: "./a16/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a16-exe"
+
+    - path: "./a17/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a17-exe"
+
+    - path: "./a18/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a18-exe"
+
+    - path: "./a19/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a19-exe"
+
+    - path: "./a20/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a20-exe"
+
+    - path: "./a21/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a21-exe"
+
+    - path: "./a22/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a22-exe"
+
+    - path: "./a23/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a23-exe"
+
+    - path: "./a24/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a24-exe"
+
+    - path: "./a25/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a25-exe"
+
+    - path: "./a26/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a26-exe"
+
+    - path: "./a27/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a27-exe"
+
+    - path: "./a28/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a28-exe"
+
+    - path: "./a29/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a29-exe"
+
+    - path: "./a30/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a30-exe"
+
+    - path: "./a31/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a31-exe"
+
+    - path: "./a32/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a32-exe"
+
+    - path: "./a33/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a33-exe"
+
+    - path: "./a34/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a34-exe"
+
+    - path: "./a35/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a35-exe"
+
+    - path: "./a36/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a36-exe"
+
+    - path: "./a37/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a37-exe"
+
+    - path: "./a38/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a38-exe"
+
+    - path: "./a39/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a39-exe"
+
+    - path: "./a40/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a40-exe"
+
+    - path: "./a41/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a41-exe"
+
+    - path: "./a42/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a42-exe"
+
+    - path: "./a43/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a43-exe"
+
+    - path: "./a44/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a44-exe"
+
+    - path: "./a45/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a45-exe"
+
+    - path: "./a46/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a46-exe"
+
+    - path: "./a49/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a49-exe"
+
+    - path: "./a50/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a50-exe"
+
+    - path: "./a51/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a51-exe"
+
+    - path: "./a52/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a52-exe"
+
+    - path: "./a53/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a53-exe"
+
+    - path: "./a54/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a54-exe"
+
+    - path: "./a55/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a55-exe"
+
+    - path: "./a56/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a56-exe"
+
+    - path: "./a57/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a57-exe"
+
+    - path: "./a58/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a58-exe"
+
+    - path: "./a59/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a59-exe"
+
+    - path: "./a60/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a60-exe"
+
+    - path: "./a61/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a61-exe"
+
+    - path: "./a62/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a62-exe"
+
+    - path: "./a63/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a63-exe"
+
+    - path: "./a64/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a64-exe"
+
+    - path: "./a65/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a65-exe"
+
+    - path: "./a66/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a66-exe"
+
+    - path: "./a67/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a67-exe"
+
+    - path: "./a68/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a68-exe"
+
+    - path: "./a69/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a69-exe"
+
+    - path: "./a70/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a70-exe"
+
+    - path: "./a71/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a71-exe"
+
+    - path: "./a72/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a72-exe"
+
+    - path: "./a73/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a73-exe"
+
+    - path: "./a74/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a74-exe"
+
+    - path: "./a75/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a75-exe"
+
+    - path: "./a76/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a76-exe"
+
+    - path: "./a77/Main.hs"
+      component: "atcoder-tessoku-hs:exe:a77-exe"
+
+    - path: "./b01/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b01-exe"
+
+    - path: "./b02/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b02-exe"
+
+    - path: "./b03/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b03-exe"
+
+    - path: "./b04/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b04-exe"
+
+    - path: "./b06/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b06-exe"
+
+    - path: "./b07/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b07-exe"
+
+    - path: "./b08/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b08-exe"
+
+    - path: "./b09/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b09-exe"
+
+    - path: "./b11/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b11-exe"
+
+    - path: "./b12/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b12-exe"
+
+    - path: "./b13/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b13-exe"
+
+    - path: "./b14/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b14-exe"
+
+    - path: "./b16/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b16-exe"
+
+    - path: "./b17/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b17-exe"
+
+    - path: "./b18/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b18-exe"
+
+    - path: "./b19/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b19-exe"
+
+    - path: "./b20/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b20-exe"
+
+    - path: "./b21/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b21-exe"
+
+    - path: "./b23/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b23-exe"
+
+    - path: "./b24/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b24-exe"
+
+    - path: "./b26/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b26-exe"
+
+    - path: "./b27/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b27-exe"
+
+    - path: "./b28/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b28-exe"
+
+    - path: "./b29/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b29-exe"
+
+    - path: "./b30/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b30-exe"
+
+    - path: "./b31/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b31-exe"
+
+    - path: "./b32/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b32-exe"
+
+    - path: "./b33/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b33-exe"
+
+    - path: "./b34/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b34-exe"
+
+    - path: "./b36/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b36-exe"
+
+    - path: "./b37/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b37-exe"
+
+    - path: "./b38/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b38-exe"
+
+    - path: "./b39/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b39-exe"
+
+    - path: "./b40/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b40-exe"
+
+    - path: "./b41/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b41-exe"
+
+    - path: "./b42/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b42-exe"
+
+    - path: "./b43/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b43-exe"
+
+    - path: "./b44/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b44-exe"
+
+    - path: "./b45/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b45-exe"
+
+    - path: "./b51/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b51-exe"
+
+    - path: "./b52/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b52-exe"
+
+    - path: "./b54/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b54-exe"
+
+    - path: "./b55/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b55-exe"
+
+    - path: "./b56/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b56-exe"
+
+    - path: "./b57/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b57-exe"
+
+    - path: "./b58/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b58-exe"
+
+    - path: "./b59/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b59-exe"
+
+    - path: "./b61/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b61-exe"
+
+    - path: "./b62/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b62-exe"
+
+    - path: "./b63/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b63-exe"
+
+    - path: "./b64/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b64-exe"
+
+    - path: "./b65/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b65-exe"
+
+    - path: "./b66/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b66-exe"
+
+    - path: "./b67/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b67-exe"
+
+    - path: "./b68/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b68-exe"
+
+    - path: "./b69/Main.hs"
+      component: "atcoder-tessoku-hs:exe:b69-exe"
+
+    - path: "./c01/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c01-exe"
+
+    - path: "./c02/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c02-exe"
+
+    - path: "./c03/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c03-exe"
+
+    - path: "./c04/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c04-exe"
+
+    - path: "./c05/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c05-exe"
+
+    - path: "./c06/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c06-exe"
+
+    - path: "./c07/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c07-exe"
+
+    - path: "./c08/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c08-exe"
+
+    - path: "./c09/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c09-exe"
+
+    - path: "./c10/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c10-exe"
+
+    - path: "./c11/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c11-exe"
+
+    - path: "./c12/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c12-exe"
+
+    - path: "./c13/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c13-exe"
+
+    - path: "./c14/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c14-exe"
+
+    - path: "./c15/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c15-exe"
+
+    - path: "./c16/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c16-exe"
+
+    - path: "./c17/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c17-exe"
+
+    - path: "./c18/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c18-exe"
+
+    - path: "./c19/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c19-exe"
+
+    - path: "./c20/Main.hs"
+      component: "atcoder-tessoku-hs:exe:c20-exe"

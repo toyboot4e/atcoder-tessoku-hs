@@ -49,33 +49,639 @@ _exe-defs: &exe-defaults
   other-modules: []
 
 executables:
-  a-exe:
+  a01-exe:
     <<: *exe-defaults
-    source-dirs: a
-    main:                Main.hs
+    source-dirs: a01
+    main: Main.hs
+  a02-exe:
+    <<: *exe-defaults
+    source-dirs: a02
+    main: Main.hs
+  a03-exe:
+    <<: *exe-defaults
+    source-dirs: a03
+    main: Main.hs
+  a04-exe:
+    <<: *exe-defaults
+    source-dirs: a04
+    main: Main.hs
+  a05-exe:
+    <<: *exe-defaults
+    source-dirs: a05
+    main: Main.hs
+  a06-exe:
+    <<: *exe-defaults
+    source-dirs: a06
+    main: Main.hs
+  a07-exe:
+    <<: *exe-defaults
+    source-dirs: a07
+    main: Main.hs
+  a08-exe:
+    <<: *exe-defaults
+    source-dirs: a08
+    main: Main.hs
+  a09-exe:
+    <<: *exe-defaults
+    source-dirs: a09
+    main: Main.hs
+  a10-exe:
+    <<: *exe-defaults
+    source-dirs: a10
+    main: Main.hs
+  a11-exe:
+    <<: *exe-defaults
+    source-dirs: a11
+    main: Main.hs
+  a12-exe:
+    <<: *exe-defaults
+    source-dirs: a12
+    main: Main.hs
+  a13-exe:
+    <<: *exe-defaults
+    source-dirs: a13
+    main: Main.hs
+  a14-exe:
+    <<: *exe-defaults
+    source-dirs: a14
+    main: Main.hs
+  a15-exe:
+    <<: *exe-defaults
+    source-dirs: a15
+    main: Main.hs
+  a16-exe:
+    <<: *exe-defaults
+    source-dirs: a16
+    main: Main.hs
+  a17-exe:
+    <<: *exe-defaults
+    source-dirs: a17
+    main: Main.hs
+  a18-exe:
+    <<: *exe-defaults
+    source-dirs: a18
+    main: Main.hs
+  a19-exe:
+    <<: *exe-defaults
+    source-dirs: a19
+    main: Main.hs
+  a20-exe:
+    <<: *exe-defaults
+    source-dirs: a20
+    main: Main.hs
+  a21-exe:
+    <<: *exe-defaults
+    source-dirs: a21
+    main: Main.hs
+  a22-exe:
+    <<: *exe-defaults
+    source-dirs: a22
+    main: Main.hs
+  a23-exe:
+    <<: *exe-defaults
+    source-dirs: a23
+    main: Main.hs
+  a24-exe:
+    <<: *exe-defaults
+    source-dirs: a24
+    main: Main.hs
+  a25-exe:
+    <<: *exe-defaults
+    source-dirs: a25
+    main: Main.hs
+  a26-exe:
+    <<: *exe-defaults
+    source-dirs: a26
+    main: Main.hs
+  a27-exe:
+    <<: *exe-defaults
+    source-dirs: a27
+    main: Main.hs
+  a28-exe:
+    <<: *exe-defaults
+    source-dirs: a28
+    main: Main.hs
+  a29-exe:
+    <<: *exe-defaults
+    source-dirs: a29
+    main: Main.hs
+  a30-exe:
+    <<: *exe-defaults
+    source-dirs: a30
+    main: Main.hs
+  a31-exe:
+    <<: *exe-defaults
+    source-dirs: a31
+    main: Main.hs
+  a32-exe:
+    <<: *exe-defaults
+    source-dirs: a32
+    main: Main.hs
+  a33-exe:
+    <<: *exe-defaults
+    source-dirs: a33
+    main: Main.hs
+  a34-exe:
+    <<: *exe-defaults
+    source-dirs: a34
+    main: Main.hs
+  a35-exe:
+    <<: *exe-defaults
+    source-dirs: a35
+    main: Main.hs
+  a36-exe:
+    <<: *exe-defaults
+    source-dirs: a36
+    main: Main.hs
+  a37-exe:
+    <<: *exe-defaults
+    source-dirs: a37
+    main: Main.hs
+  a38-exe:
+    <<: *exe-defaults
+    source-dirs: a38
+    main: Main.hs
+  a39-exe:
+    <<: *exe-defaults
+    source-dirs: a39
+    main: Main.hs
+  a40-exe:
+    <<: *exe-defaults
+    source-dirs: a40
+    main: Main.hs
+  a41-exe:
+    <<: *exe-defaults
+    source-dirs: a41
+    main: Main.hs
+  a42-exe:
+    <<: *exe-defaults
+    source-dirs: a42
+    main: Main.hs
+  a43-exe:
+    <<: *exe-defaults
+    source-dirs: a43
+    main: Main.hs
+  a44-exe:
+    <<: *exe-defaults
+    source-dirs: a44
+    main: Main.hs
+  a45-exe:
+    <<: *exe-defaults
+    source-dirs: a45
+    main: Main.hs
+  a46-exe:
+    <<: *exe-defaults
+    source-dirs: a46
+    main: Main.hs
+  a49-exe:
+    <<: *exe-defaults
+    source-dirs: a49
+    main: Main.hs
+  a50-exe:
+    <<: *exe-defaults
+    source-dirs: a50
+    main: Main.hs
+  a51-exe:
+    <<: *exe-defaults
+    source-dirs: a51
+    main: Main.hs
+  a52-exe:
+    <<: *exe-defaults
+    source-dirs: a52
+    main: Main.hs
+  a53-exe:
+    <<: *exe-defaults
+    source-dirs: a53
+    main: Main.hs
+  a54-exe:
+    <<: *exe-defaults
+    source-dirs: a54
+    main: Main.hs
+  a55-exe:
+    <<: *exe-defaults
+    source-dirs: a55
+    main: Main.hs
+  a56-exe:
+    <<: *exe-defaults
+    source-dirs: a56
+    main: Main.hs
+  a57-exe:
+    <<: *exe-defaults
+    source-dirs: a57
+    main: Main.hs
+  a58-exe:
+    <<: *exe-defaults
+    source-dirs: a58
+    main: Main.hs
+  a59-exe:
+    <<: *exe-defaults
+    source-dirs: a59
+    main: Main.hs
+  a60-exe:
+    <<: *exe-defaults
+    source-dirs: a60
+    main: Main.hs
+  a61-exe:
+    <<: *exe-defaults
+    source-dirs: a61
+    main: Main.hs
+  a62-exe:
+    <<: *exe-defaults
+    source-dirs: a62
+    main: Main.hs
+  a63-exe:
+    <<: *exe-defaults
+    source-dirs: a63
+    main: Main.hs
+  a64-exe:
+    <<: *exe-defaults
+    source-dirs: a64
+    main: Main.hs
+  a65-exe:
+    <<: *exe-defaults
+    source-dirs: a65
+    main: Main.hs
+  a66-exe:
+    <<: *exe-defaults
+    source-dirs: a66
+    main: Main.hs
+  a67-exe:
+    <<: *exe-defaults
+    source-dirs: a67
+    main: Main.hs
+  a68-exe:
+    <<: *exe-defaults
+    source-dirs: a68
+    main: Main.hs
+  a69-exe:
+    <<: *exe-defaults
+    source-dirs: a69
+    main: Main.hs
+  a70-exe:
+    <<: *exe-defaults
+    source-dirs: a70
+    main: Main.hs
+  a71-exe:
+    <<: *exe-defaults
+    source-dirs: a71
+    main: Main.hs
+  a72-exe:
+    <<: *exe-defaults
+    source-dirs: a72
+    main: Main.hs
+  a73-exe:
+    <<: *exe-defaults
+    source-dirs: a73
+    main: Main.hs
+  a74-exe:
+    <<: *exe-defaults
+    source-dirs: a74
+    main: Main.hs
+  a75-exe:
+    <<: *exe-defaults
+    source-dirs: a75
+    main: Main.hs
+  a76-exe:
+    <<: *exe-defaults
+    source-dirs: a76
+    main: Main.hs
+  a77-exe:
+    <<: *exe-defaults
+    source-dirs: a77
+    main: Main.hs
+  b01-exe:
+    <<: *exe-defaults
+    source-dirs: b01
+    main: Main.hs
+  b02-exe:
+    <<: *exe-defaults
+    source-dirs: b02
+    main: Main.hs
+  b03-exe:
+    <<: *exe-defaults
+    source-dirs: b03
+    main: Main.hs
+  b04-exe:
+    <<: *exe-defaults
+    source-dirs: b04
+    main: Main.hs
+  b06-exe:
+    <<: *exe-defaults
+    source-dirs: b06
+    main: Main.hs
+  b07-exe:
+    <<: *exe-defaults
+    source-dirs: b07
+    main: Main.hs
+  b08-exe:
+    <<: *exe-defaults
+    source-dirs: b08
+    main: Main.hs
+  b09-exe:
+    <<: *exe-defaults
+    source-dirs: b09
+    main: Main.hs
+  b11-exe:
+    <<: *exe-defaults
+    source-dirs: b11
+    main: Main.hs
+  b12-exe:
+    <<: *exe-defaults
+    source-dirs: b12
+    main: Main.hs
+  b13-exe:
+    <<: *exe-defaults
+    source-dirs: b13
+    main: Main.hs
+  b14-exe:
+    <<: *exe-defaults
+    source-dirs: b14
+    main: Main.hs
+  b16-exe:
+    <<: *exe-defaults
+    source-dirs: b16
+    main: Main.hs
+  b17-exe:
+    <<: *exe-defaults
+    source-dirs: b17
+    main: Main.hs
+  b18-exe:
+    <<: *exe-defaults
+    source-dirs: b18
+    main: Main.hs
+  b19-exe:
+    <<: *exe-defaults
+    source-dirs: b19
+    main: Main.hs
+  b20-exe:
+    <<: *exe-defaults
+    source-dirs: b20
+    main: Main.hs
+  b21-exe:
+    <<: *exe-defaults
+    source-dirs: b21
+    main: Main.hs
+  b23-exe:
+    <<: *exe-defaults
+    source-dirs: b23
+    main: Main.hs
+  b24-exe:
+    <<: *exe-defaults
+    source-dirs: b24
+    main: Main.hs
+  b26-exe:
+    <<: *exe-defaults
+    source-dirs: b26
+    main: Main.hs
+  b27-exe:
+    <<: *exe-defaults
+    source-dirs: b27
+    main: Main.hs
+  b28-exe:
+    <<: *exe-defaults
+    source-dirs: b28
+    main: Main.hs
+  b29-exe:
+    <<: *exe-defaults
+    source-dirs: b29
+    main: Main.hs
+  b30-exe:
+    <<: *exe-defaults
+    source-dirs: b30
+    main: Main.hs
+  b31-exe:
+    <<: *exe-defaults
+    source-dirs: b31
+    main: Main.hs
+  b32-exe:
+    <<: *exe-defaults
+    source-dirs: b32
+    main: Main.hs
+  b33-exe:
+    <<: *exe-defaults
+    source-dirs: b33
+    main: Main.hs
+  b34-exe:
+    <<: *exe-defaults
+    source-dirs: b34
+    main: Main.hs
+  b36-exe:
+    <<: *exe-defaults
+    source-dirs: b36
+    main: Main.hs
+  b37-exe:
+    <<: *exe-defaults
+    source-dirs: b37
+    main: Main.hs
+  b38-exe:
+    <<: *exe-defaults
+    source-dirs: b38
+    main: Main.hs
+  b39-exe:
+    <<: *exe-defaults
+    source-dirs: b39
+    main: Main.hs
+  b40-exe:
+    <<: *exe-defaults
+    source-dirs: b40
+    main: Main.hs
+  b41-exe:
+    <<: *exe-defaults
+    source-dirs: b41
+    main: Main.hs
+  b42-exe:
+    <<: *exe-defaults
+    source-dirs: b42
+    main: Main.hs
+  b43-exe:
+    <<: *exe-defaults
+    source-dirs: b43
+    main: Main.hs
+  b44-exe:
+    <<: *exe-defaults
+    source-dirs: b44
+    main: Main.hs
+  b45-exe:
+    <<: *exe-defaults
+    source-dirs: b45
+    main: Main.hs
+  b51-exe:
+    <<: *exe-defaults
+    source-dirs: b51
+    main: Main.hs
+  b52-exe:
+    <<: *exe-defaults
+    source-dirs: b52
+    main: Main.hs
+  b54-exe:
+    <<: *exe-defaults
+    source-dirs: b54
+    main: Main.hs
+  b55-exe:
+    <<: *exe-defaults
+    source-dirs: b55
+    main: Main.hs
+  b56-exe:
+    <<: *exe-defaults
+    source-dirs: b56
+    main: Main.hs
+  b57-exe:
+    <<: *exe-defaults
+    source-dirs: b57
+    main: Main.hs
+  b58-exe:
+    <<: *exe-defaults
+    source-dirs: b58
+    main: Main.hs
+  b59-exe:
+    <<: *exe-defaults
+    source-dirs: b59
+    main: Main.hs
+  b61-exe:
+    <<: *exe-defaults
+    source-dirs: b61
+    main: Main.hs
+  b62-exe:
+    <<: *exe-defaults
+    source-dirs: b62
+    main: Main.hs
+  b63-exe:
+    <<: *exe-defaults
+    source-dirs: b63
+    main: Main.hs
+  b64-exe:
+    <<: *exe-defaults
+    source-dirs: b64
+    main: Main.hs
+  b65-exe:
+    <<: *exe-defaults
+    source-dirs: b65
+    main: Main.hs
+  b66-exe:
+    <<: *exe-defaults
+    source-dirs: b66
+    main: Main.hs
+  b67-exe:
+    <<: *exe-defaults
+    source-dirs: b67
+    main: Main.hs
+  b68-exe:
+    <<: *exe-defaults
+    source-dirs: b68
+    main: Main.hs
+  b69-exe:
+    <<: *exe-defaults
+    source-dirs: b69
+    main: Main.hs
+  c01-exe:
+    <<: *exe-defaults
+    source-dirs: c01
+    main: Main.hs
+  c02-exe:
+    <<: *exe-defaults
+    source-dirs: c02
+    main: Main.hs
+  c03-exe:
+    <<: *exe-defaults
+    source-dirs: c03
+    main: Main.hs
+  c04-exe:
+    <<: *exe-defaults
+    source-dirs: c04
+    main: Main.hs
+  c05-exe:
+    <<: *exe-defaults
+    source-dirs: c05
+    main: Main.hs
+  c06-exe:
+    <<: *exe-defaults
+    source-dirs: c06
+    main: Main.hs
+  c07-exe:
+    <<: *exe-defaults
+    source-dirs: c07
+    main: Main.hs
+  c08-exe:
+    <<: *exe-defaults
+    source-dirs: c08
+    main: Main.hs
+  c09-exe:
+    <<: *exe-defaults
+    source-dirs: c09
+    main: Main.hs
+  c10-exe:
+    <<: *exe-defaults
+    source-dirs: c10
+    main: Main.hs
+  c11-exe:
+    <<: *exe-defaults
+    source-dirs: c11
+    main: Main.hs
+  c12-exe:
+    <<: *exe-defaults
+    source-dirs: c12
+    main: Main.hs
+  c13-exe:
+    <<: *exe-defaults
+    source-dirs: c13
+    main: Main.hs
+  c14-exe:
+    <<: *exe-defaults
+    source-dirs: c14
+    main: Main.hs
+  c15-exe:
+    <<: *exe-defaults
+    source-dirs: c15
+    main: Main.hs
+  c16-exe:
+    <<: *exe-defaults
+    source-dirs: c16
+    main: Main.hs
+  c17-exe:
+    <<: *exe-defaults
+    source-dirs: c17
+    main: Main.hs
+  c18-exe:
+    <<: *exe-defaults
+    source-dirs: c18
+    main: Main.hs
+  c19-exe:
+    <<: *exe-defaults
+    source-dirs: c19
+    main: Main.hs
+  c20-exe:
+    <<: *exe-defaults
+    source-dirs: c20
+    main: Main.hs
 
-  b-exe:
-    <<: *exe-defaults
-    source-dirs: b
-    main:                Main.hs
-
-  c-exe:
-    <<: *exe-defaults
-    source-dirs: c
-    main:                Main.hs
-
-  d-exe:
-    <<: *exe-defaults
-    source-dirs: d
-    main:                Main.hs
-
-  e-exe:
-    <<: *exe-defaults
-    source-dirs: e
-    main:                Main.hs
-
-  f-exe:
-    <<: *exe-defaults
-    source-dirs: f
-    main:                Main.hs
+# executables:
+#   a-exe:
+#     <<: *exe-defaults
+#     source-dirs: a
+#     main:                Main.hs
+# 
+#   b-exe:
+#     <<: *exe-defaults
+#     source-dirs: b
+#     main:                Main.hs
+# 
+#   c-exe:
+#     <<: *exe-defaults
+#     source-dirs: c
+#     main:                Main.hs
+# 
+#   d-exe:
+#     <<: *exe-defaults
+#     source-dirs: d
+#     main:                Main.hs
+# 
+#   e-exe:
+#     <<: *exe-defaults
+#     source-dirs: e
+#     main:                Main.hs
+# 
+#   f-exe:
+#     <<: *exe-defaults
+#     source-dirs: f
+#     main:                Main.hs
 
