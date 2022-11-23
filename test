@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 cd "$1"
-oj t --directory "test-cases" -c "./Main.hs"
+oj t -N --directory "test-cases" -c "./Main.hs"
 
