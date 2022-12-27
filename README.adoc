@@ -2,55 +2,9 @@
 
 Power..
 
-== Libraries
-
-- base-4.13:
-    - https://hackage.haskell.org/package/base-4.13.0.0/docs/Data-Bits.html[Data.Bits]
-
-- [lts-16.1](https://www.stackage.org/lts-16.11):
-    - https://www.stackage.org/lts-16.11/package/array-0.5.4.0[array]
-    - https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0[bytestring]
-    - https://www.stackage.org/lts-16.11/package/containers-0.6.2.1[containers]
-    - https://www.stackage.org/lts-16.11/package/primitive-0.7.0.1[primitive]
-    - https://www.stackage.org/lts-16.11/package/transformers-0.5.6.2[transformers]
-    - https://s3.amazonaws.com/haddock.stackage.org/lts-16.11/unordered-containers-0.2.10.0/index.html[unordered-containers]
-    - https://www.stackage.org/lts-16.11/package/vector-0.12.1.2[vector]
-    - https://www.stackage.org/lts-16.11/package/vector-algorithms-0.8.0.3[vector-algorithms]
-
 == Progress
 
-- A: 30 / 77
+- A: 31 / 77
 - B: 0 / 69
 - C: 0 / 20
-
-== Tables
-
-.A
-|===
-| link:./a01/Main.hs[a01] | link:./a02/Main.hs[a02] | link:./a03/Main.hs[a03] | link:./a04/Main.hs[a04] | link:./a05/Main.hs[a05] | link:./a06/Main.hs[a06] | link:./a07/Main.hs[a07] | link:./a08/Main.hs[a08] | link:./a09/Main.hs[a09] | link:./a10/Main.hs[a10]
-| link:./a11/Main.hs[a11] | link:./a12/Main.hs[a12] | link:./a13/Main.hs[a13] | link:./a14/Main.hs[a14] | link:./a15/Main.hs[a15] | link:./a16/Main.hs[a16] | link:./a17/Main.hs[a17] | link:./a18/Main.hs[a18] | link:./a19/Main.hs[a19] | link:./a20/Main.hs[a20]
-| link:./a21/Main.hs[a21] | link:./a22/Main.hs[a22] | link:./a23/Main.hs[a23] | link:./a24/Main.hs[a24] | link:./a25/Main.hs[a25] | link:./a26/Main.hs[a26] | link:./a27/Main.hs[a27] | link:./a28/Main.hs[a28] | link:./a29/Main.hs[a29] | link:./a30/Main.hs[a30]
-| link:./a31/Main.hs[a31] | link:./a32/Main.hs[a32] | link:./a33/Main.hs[a33] | link:./a34/Main.hs[a34] | link:./a35/Main.hs[a35] | link:./a36/Main.hs[a36] | link:./a37/Main.hs[a37] | link:./a38/Main.hs[a38] | link:./a39/Main.hs[a39] | link:./a40/Main.hs[a40]
-| link:./a41/Main.hs[a41] | link:./a42/Main.hs[a42] | link:./a43/Main.hs[a43] | link:./a44/Main.hs[a44] | link:./a45/Main.hs[a45] | link:./a46/Main.hs[a46] | a47 | a48 | link:./a49/Main.hs[a49] | link:./a50/Main.hs[a50]
-| link:./a51/Main.hs[a51] | link:./a52/Main.hs[a52] | link:./a53/Main.hs[a53] | link:./a54/Main.hs[a54] | link:./a55/Main.hs[a55] | link:./a56/Main.hs[a56] | link:./a57/Main.hs[a57] | link:./a58/Main.hs[a58] | link:./a59/Main.hs[a59] | link:./a60/Main.hs[a60]
-| link:./a61/Main.hs[a61] | link:./a62/Main.hs[a62] | link:./a63/Main.hs[a63] | link:./a64/Main.hs[a64] | link:./a65/Main.hs[a65] | link:./a66/Main.hs[a66] | link:./a67/Main.hs[a67] | link:./a68/Main.hs[a68] | link:./a69/Main.hs[a69] | link:./a70/Main.hs[a70]
-| link:./a71/Main.hs[a71] | link:./a72/Main.hs[a72] | link:./a73/Main.hs[a73] | link:./a74/Main.hs[a74] | link:./a75/Main.hs[a75] | link:./a76/Main.hs[a76] | link:./a77/Main.hs[a77] | | |
-|===
-
-.B
-|===
-| link:./b01/Main.hs[b01] | link:./b02/Main.hs[b02] | link:./b03/Main.hs[b03] | link:./b04/Main.hs[b04] | b05 | link:./b06/Main.hs[b06] | link:./b07/Main.hs[b07] | link:./b08/Main.hs[b08] | link:./b09/Main.hs[b09] | b10
-| link:./b11/Main.hs[b11] | link:./b12/Main.hs[b12] | link:./b13/Main.hs[b13] | link:./b14/Main.hs[b14] | b15 | link:./b16/Main.hs[b16] | link:./b17/Main.hs[b17] | link:./b18/Main.hs[b18] | link:./b19/Main.hs[b19] | link:./b20/Main.hs[b20]
-| link:./b21/Main.hs[b21] | b22 | link:./b23/Main.hs[b23] | link:./b24/Main.hs[b24] | b25 | link:./b26/Main.hs[b26] | link:./b27/Main.hs[b27] | link:./b28/Main.hs[b28] | link:./b29/Main.hs[b29] | link:./b30/Main.hs[b30]
-| link:./b31/Main.hs[b31] | link:./b32/Main.hs[b32] | link:./b33/Main.hs[b33] | link:./b34/Main.hs[b34] | b35 | link:./b36/Main.hs[b36] | link:./b37/Main.hs[b37] | link:./b38/Main.hs[b38] | link:./b39/Main.hs[b39] | link:./b40/Main.hs[b40]
-| link:./b41/Main.hs[b41] | link:./b42/Main.hs[b42] | link:./b43/Main.hs[b43] | link:./b44/Main.hs[b44] | link:./b45/Main.hs[b45] | b46 | b47 | b48 | b49 | b50 
-| link:./b51/Main.hs[b51] | link:./b52/Main.hs[b52] | b53 | link:./b54/Main.hs[b54] | link:./b55/Main.hs[b55] | link:./b56/Main.hs[b56] | link:./b57/Main.hs[b57] | link:./b58/Main.hs[b58] | link:./b59/Main.hs[b59] | b60
-| link:./b61/Main.hs[b61] | link:./b62/Main.hs[b62] | link:./b63/Main.hs[b63] | link:./b64/Main.hs[b64] | link:./b65/Main.hs[b65] | link:./b66/Main.hs[b66] | link:./b67/Main.hs[b67] | link:./b68/Main.hs[b68] | link:./b69/Main.hs[b69] |
-|===
-
-.C
-|===
-| link:./c01/Main.hs[c01] | link:./c02/Main.hs[c02] | link:./c03/Main.hs[c03] | link:./c04/Main.hs[c04] | link:./c05/Main.hs[c05] | link:./c06/Main.hs[c06] | link:./c07/Main.hs[c07] | link:./c08/Main.hs[c08] | link:./c09/Main.hs[c09] | link:./c10/Main.hs[c10]
-| link:./c11/Main.hs[c11] | link:./c12/Main.hs[c12] | link:./c13/Main.hs[c13] | link:./c14/Main.hs[c14] | link:./c15/Main.hs[c15] | link:./c16/Main.hs[c16] | link:./c17/Main.hs[c17] | link:./c18/Main.hs[c18] | link:./c19/Main.hs[c19] | link:./c20/Main.hs[c20]
-|===
 
