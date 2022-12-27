@@ -4,17 +4,22 @@ Power..
 
 == Libraries
 
-- base-4.13
-  - https://hackage.haskell.org/package/base-4.13.0.0/docs/Data-Bits.html[Data.Bits]
+- base-4.13:
+    - https://hackage.haskell.org/package/base-4.13.0.0/docs/Data-Bits.html[Data.Bits]
 
-- lts-16.1
-  - https://www.stackage.org/lts-16.11/package/array-0.5.4.0[array]
-  - https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0[bytestring]
-  - https://www.stackage.org/lts-16.11/package/vector-0.12.1.2[vector]
+- [lts-16.1](https://www.stackage.org/lts-16.11):
+    - https://www.stackage.org/lts-16.11/package/array-0.5.4.0[array]
+    - https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0[bytestring]
+    - https://www.stackage.org/lts-16.11/package/containers-0.6.2.1[containers]
+    - https://www.stackage.org/lts-16.11/package/primitive-0.7.0.1[primitive]
+    - https://www.stackage.org/lts-16.11/package/transformers-0.5.6.2[transformers]
+    - https://s3.amazonaws.com/haddock.stackage.org/lts-16.11/unordered-containers-0.2.10.0/index.html[unordered-containers]
+    - https://www.stackage.org/lts-16.11/package/vector-0.12.1.2[vector]
+    - https://www.stackage.org/lts-16.11/package/vector-algorithms-0.8.0.3[vector-algorithms]
 
 == Progress
 
-- A: 6 / 77
+- A: 30 / 77
 - B: 0 / 69
 - C: 0 / 20
 

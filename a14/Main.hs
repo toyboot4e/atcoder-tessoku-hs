@@ -24,7 +24,9 @@ getLineIntList = unfoldr (BS.readInt . BS.dropWhile isSpace) <$> BS.getLine
 getLineIntVec :: IO (VU.Vector Int)
 getLineIntVec = VU.unfoldr (BS.readInt . BS.dropWhile isSpace) <$> BS.getLine
 
--- | Binary search for a sorted items which returns the `(ok, ng)` index pair at the boundary.
+-- | Binary search for sorted items in an inclusive range (from left to right only)
+-- |
+-- | It returns the `(ok, ng)` index pair at the boundary.
 -- |
 -- | Example
 -- | -------
@@ -40,43 +42,18 @@ getLineIntVec = VU.unfoldr (BS.readInt . BS.dropWhile isSpace) <$> BS.getLine
 -- | > > let xs = [0..9] in do
 -- | > >   print $ bsearchMain (0, 9) (\i -> xs !! i <= 5)
 -- | > (5, 6)
--- |
--- | Note that the closure CANNOT BE an exact match. Use a range-based predicate instead.
--- |
--- | Errors in edge cases
--- | --------------------
--- |
--- | While this function works for the above example, be warned that it's incomplete.
--- | It makes errors in certain edge cases:
--- |
--- | 1. The only `ok` item is at the end of the list.
--- | 2. The only `ng` item is at the beginning of the list.
--- | 3. There's no `ok` item or there's no `ng` item.
--- |
--- | So this function is wrapped by `bsearch`.
-bsearchMain :: (Int, Int) -> (Int -> Bool) -> (Int, Int)
-bsearchMain (ok, ng) isOk
-  | abs (ok - ng) == 1 = (ok, ng)
-  | isOk m = bsearchMain (m, ng) isOk
-  | otherwise = bsearchMain (ok, m) isOk
-  where
-    m = (ok + ng) `div` 2
-
--- | Binary search for inclusive range (from left to right only)
 bsearch :: (Int, Int) -> (Int -> Bool) -> (Maybe Int, Maybe Int)
-bsearch (low, top) isOk = bimap wrap wrap result
+bsearch (low, high) isOk = bimap wrap wrap (loop (low - 1, high + 1) isOk)
   where
-    result = bsearchMain (low - 1, top + 1) isOk'
-
-    isOk' :: Int -> Bool
-    isOk' x
-      | x == low - 1 = True
-      | x == top + 1 = False
-      | otherwise = isOk x
-
+    loop (ok, ng) isOk
+      | abs (ok - ng) == 1 = (ok, ng)
+      | isOk m = loop (m, ng) isOk
+      | otherwise = loop (ok, m) isOk
+      where
+        m = (ok + ng) `div` 2
     wrap :: Int -> Maybe Int
     wrap x
-      | x == low - 1 || x == top + 1 = Nothing
+      | x == low - 1 || x == high + 1 = Nothing
       | otherwise = Just x
 
 main :: IO ()
