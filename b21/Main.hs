@@ -1,7 +1,7 @@
 #!/usr/bin/env stack
 {- stack script --resolver lts-16.11
 --package array --package bytestring --package containers
---package hashable --package unordered-containers --package heaps
+--package hashable --package unordered-containers
 --package vector --package vector-algorithms --package primitive --package transformers
 -}
 
@@ -69,9 +69,6 @@ import qualified Data.Vector.Algorithms.Search as VAS
 import qualified Data.IntMap.Strict as IM
 import qualified Data.Map.Strict as M
 import qualified Data.IntSet as IS
-
--- heaps: https://www.stackage.org/haddock/lts-16.11/heaps-0.3.6.1/Data-Heap.html
-import qualified Data.Heap as H
 
 -- hashable: https://www.stackage.org/lts-16.11/package/hashable-1.3.0.0
 import Data.Hashable
@@ -564,151 +561,40 @@ decrementMS k (n, im) =
 
 -- }}}
 
--- {{{ Graph
-
-type Graph = Array Int [Int]
-
--- | [Tree only] Searches through all the posible routes.
-{-# INLINE dfsAll #-}
-dfsAll :: forall s. (Int -> s -> s) -> s -> Graph -> Int -> [s]
-dfsAll !f !s0 !graph !start = snd $ visitNode s0 (IS.empty, []) start
-  where
-    visitNode :: s -> (IS.IntSet, [s]) -> Int -> (IS.IntSet, [s])
-    visitNode !s (!visits, !results) !x =
-      let -- !_ = traceShow x ()
-          !visits' = IS.insert x visits
-          !s' = f x s
-       in visitNeighbors s' (visits', results) x
-
-    visitNeighbors :: s -> (IS.IntSet, [s]) -> Int -> (IS.IntSet, [s])
-    visitNeighbors !s (!visits, !results) !x =
-      let -- !_ = traceShow x ()
-          nbs = filter (\n -> not $ IS.member n visits) (graph ! x)
-       in if null nbs
-            then (visits, s : results)
-            else
-              foldl'
-                ( \(!vs, !rs) !n ->
-                    -- TODO: remove this branch. it's for graphs:
-                    if IS.member n vs
-                      then -- discard duplicates
-                        (vs, rs)
-                      else visitNode s (visits, rs) n
-                )
-                (visits, results)
-                nbs
-
--- | Searches for a specific route in depth-first order.
-{-# INLINE dfsFind #-}
-dfsFind :: forall s. (Int -> s -> (Bool, s)) -> s -> Graph -> Int -> Maybe s
-dfsFind !f !s0 !graph !start = snd $ visitNode s0 IS.empty start
-  where
-    visitNode :: s -> IS.IntSet -> Int -> (IS.IntSet, Maybe s)
-    visitNode !s !visits !x =
-      let -- !_ = traceShow x ()
-          visits' = IS.insert x visits
-          (goal, s') = f x s
-       in if goal
-            then (visits', Just s')
-            else visitNeighbors s' visits' x
-
-    visitNeighbors :: s -> IS.IntSet -> Int -> (IS.IntSet, Maybe s)
-    visitNeighbors s visits x =
-      let -- !_ = traceShow x ()
-          !nbs = filter (\n -> not $ IS.member n visits) (graph ! x)
-       in foldl'
-            ( \(!vs, !result) !n ->
-                if isJust result || IS.member n vs
-                  then (vs, result)
-                  else visitNode s visits n
-            )
-            (visits, Nothing)
-            nbs
-
--- TODO: test it
-
--- | Searches for a specific route in breadth-first order.
--- | Returns `Just (depth, node)` if succeed.
-{-# INLINE bfsFind #-}
-bfsFind :: (Int -> Bool) -> Graph -> Int -> Maybe (Int, Int)
-bfsFind !f !graph !start =
-  if f start
-    then Just (0, start)
-    else bfsRec 1 (IS.singleton start) (IS.fromList $ graph ! start)
-  where
-    bfsRec :: Int -> IS.IntSet -> IS.IntSet -> Maybe (Int, Int)
-    bfsRec depth !visits !nbs =
-      let -- !_ = traceShow x ()
-          !visits' = foldl' (flip IS.insert) visits (IS.toList nbs)
-       in let (result, nextNbs) = visitNeighbors nbs
-           in case result of
-                Just x -> Just (depth, x)
-                Nothing -> bfsRec (succ depth) visits' nextNbs
-    visitNeighbors :: IS.IntSet -> (Maybe Int, IS.IntSet)
-    visitNeighbors nbs =
-      let -- !_ = traceShow x ()
-          !nbsList = IS.toList nbs
-       in foldl'
-            ( \(!result, !nbs') !x ->
-                let nbs'' = IS.insert x nbs'
-                 in if f x
-                      then (Just x, nbs'')
-                      else (result, nbs'')
-            )
-            (Nothing, IS.empty)
-            nbsList
-
--- | Weighted graph (Entry priority payload)
-type WGraph = Array Int [IHeapEntry]
-
--- | Int heap
-type IHeap = H.Heap IHeapEntry
-
--- | Int entry
-type IHeapEntry = H.Entry Int Int
-
-dijkstra :: forall s. (s -> IHeapEntry -> s) -> s -> WGraph -> Int -> s
-dijkstra !f s0 !graph !start =
-  let (s, _, _) = visitRec (s0, IS.empty, H.singleton $ H.Entry 0 start)
-   in s
-  where
-    visitRec :: (s, IS.IntSet, IHeap) -> (s, IS.IntSet, IHeap)
-    visitRec (!s, !visits, !nbs) =
-      case H.uncons nbs of
-        Just (x, nbs') ->
-          if IS.member (H.payload x) visits
-            then visitRec (s, visits, nbs')
-            else visitRec $ visitNode (s, visits, nbs') x
-        Nothing -> (s, visits, nbs)
-
-    visitNode :: (s, IS.IntSet, IHeap) -> IHeapEntry -> (s, IS.IntSet, IHeap)
-    visitNode (!s, !visits, !nbs) entry@(H.Entry cost x) =
-      let visits' = IS.insert x visits
-          news = H.fromList . map (first (cost +)) . filter p $ graph ! x
-          p = not . (`IS.member` visits') . H.payload
-       in (f s entry, visits', H.union nbs news)
-
--- }}}
-
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [n] <- getLineIntList
+  s <- BS.getLine
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  let dp = runSTUArray $ do
+        let bounds_ = ((0, 0), (n + 1, n + 1))
+        arr <- newArray bounds_ (0 :: Int)
 
-  -- let !_ = traceShow doubling ()
+        let get_ i = if inRange ((1, 1), (n, n)) i then readArray arr i else return 0
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
+        forM_ [1 .. n] $ \l -> do
+          forM_ [0 .. n - (l + 1)] $ \r' -> do
+            let r = n - r'
+            -- let !_ = traceShow (l, r) ()
 
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
+            -- TODO: add boundary check
+            v1 <- get_ (l - 1, r)
+            v2 <- get_ (l, r + 1)
+            v3 <-
+              if inRange bounds_ (l, r)
+                then ((+) if BS.index s (l - 1) == BS.index s (r - 1) then 1 else 0) <$> readArray arr (l - 1, r + 1)
+                else return 0
 
---
+            -- let !_ =
+            --       if inRange bounds_ (l, r) && BS.index s (l - 1) == BS.index s (r - 1)
+            --         then traceShow (l, BS.index s (l - 1), r, BS.index s (r - 1)) ()
+            --         else ()
+
+            writeArray arr (l, r) (maximum [v1, v2, v3])
+
+        return arr
+
+  let v1 = if n < 3 then 0 else 1 + 2 * maximum [dp ! (l, r) | l <- [1 .. n - 2], let r = l + 2]
+  let v2 = if n < 2 then 0 else 0 + 2 * maximum [dp ! (l, r) | l <- [1 .. n - 1], let r = l + 1]
+
+  print $ maximum [1, v1, v2]

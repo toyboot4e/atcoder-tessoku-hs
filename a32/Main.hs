@@ -5,6 +5,13 @@
 --package vector --package vector-algorithms --package primitive --package transformers
 -}
 
+{- TODOs
+- [ ] Test dfsEveryVertex
+- [ ] Better BFS
+- [ ] Better dijkstra
+- [ ] Easier rolling hash
+-}
+
 {- ORMOLU_DISABLE -}
 {-# LANGUAGE BangPatterns, BlockArguments, LambdaCase, MultiWayIf, PatternGuards, TupleSections #-}
 {-# LANGUAGE NumDecimals, NumericUnderscores #-}
@@ -66,9 +73,12 @@ import qualified Data.Vector.Algorithms.Intro as VAI
 import qualified Data.Vector.Algorithms.Search as VAS
 
 -- containers: https://www.stackage.org/lts-16.11/package/containers-0.6.2.1
+import qualified Data.Graph as G
 import qualified Data.IntMap.Strict as IM
 import qualified Data.Map.Strict as M
 import qualified Data.IntSet as IS
+import qualified Data.Set as S
+import qualified Data.Sequence as Seq
 
 -- heaps: https://www.stackage.org/haddock/lts-16.11/heaps-0.3.6.1/Data-Heap.html
 import qualified Data.Heap as H
@@ -183,40 +193,40 @@ bsearchM (low, high) isOk = bimap wrap wrap <$> loop (low - 1, high + 1)
 
 -- }}}
 
--- {{{ Union-Find tree
+-- {{{ Mutable union-Find tree
 
 -- | Union-find implementation (originally by `@pel`)
-newtype UnionFind s = UnionFind (VM.MVector s UfNode)
+newtype MUnionFind s = MUnionFind (VM.MVector s UfNode)
 
-type IOUnionFind = UnionFind RealWorld
+type IOUnionFind = MUnionFind RealWorld
 
-type STUnionFind s = UnionFind s
+type STUnionFind s = MUnionFind s
 
 -- | `Child parent | Root size`. Not `Unbox` :(
 data UfNode = Child {-# UNPACK #-} !Int | Root {-# UNPACK #-} !Int
 
 -- | Creates a new Union-Find tree of the given size.
-{-# INLINE newUF #-}
-newUF :: (PrimMonad m) => Int -> m (UnionFind (PrimState m))
-newUF n = UnionFind <$> VM.replicate n (Root 1)
+{-# INLINE newMUF #-}
+newMUF :: (PrimMonad m) => Int -> m (MUnionFind (PrimState m))
+newMUF n = MUnionFind <$> VM.replicate n (Root 1)
 
 -- | Returns the root node index.
-{-# INLINE rootUF #-}
-rootUF :: (PrimMonad m) => UnionFind (PrimState m) -> Int -> m Int
-rootUF uf@(UnionFind vec) i = do
+{-# INLINE rootMUF #-}
+rootMUF :: (PrimMonad m) => MUnionFind (PrimState m) -> Int -> m Int
+rootMUF uf@(MUnionFind vec) i = do
   node <- VM.read vec i
   case node of
     Root _ -> return i
     Child p -> do
-      r <- rootUF uf p
+      r <- rootMUF uf p
       -- NOTE(perf): path compression (move the queried node to just under the root, recursivelly)
       VM.write vec i (Child r)
       return r
 
 -- | Checks if the two nodes are under the same root.
-{-# INLINE sameUF #-}
-sameUF :: (PrimMonad m) => UnionFind (PrimState m) -> Int -> Int -> m Bool
-sameUF uf x y = liftM2 (==) (rootUF uf x) (rootUF uf y)
+{-# INLINE sameMUF #-}
+sameMUF :: (PrimMonad m) => MUnionFind (PrimState m) -> Int -> Int -> m Bool
+sameMUF uf x y = liftM2 (==) (rootMUF uf x) (rootMUF uf y)
 
 -- | Just an internal helper.
 _unwrapRoot :: UfNode -> Int
@@ -224,11 +234,11 @@ _unwrapRoot (Root s) = s
 _unwrapRoot (Child _) = undefined
 
 -- | Unites two nodes.
-{-# INLINE uniteUF #-}
-uniteUF :: (PrimMonad m) => UnionFind (PrimState m) -> Int -> Int -> m ()
-uniteUF uf@(UnionFind vec) x y = do
-  px <- rootUF uf x
-  py <- rootUF uf y
+{-# INLINE uniteMUF #-}
+uniteMUF :: (PrimMonad m) => MUnionFind (PrimState m) -> Int -> Int -> m ()
+uniteMUF uf@(MUnionFind vec) x y = do
+  px <- rootMUF uf x
+  py <- rootMUF uf y
   when (px /= py) $ do
     sx <- _unwrapRoot <$> VM.read vec px
     sy <- _unwrapRoot <$> VM.read vec py
@@ -238,10 +248,10 @@ uniteUF uf@(UnionFind vec) x y = do
     VM.write vec par (Root (sx + sy))
 
 -- | Returns the size of the root node, starting with `1`.
-{-# INLINE sizeUF #-}
-sizeUF :: (PrimMonad m) => UnionFind (PrimState m) -> Int -> m Int
-sizeUF uf@(UnionFind vec) x = do
-  px <- rootUF uf x
+{-# INLINE sizeMUF #-}
+sizeMUF :: (PrimMonad m) => MUnionFind (PrimState m) -> Int -> m Int
+sizeMUF uf@(MUnionFind vec) x = do
+  px <- rootMUF uf x
   _unwrapRoot <$> VM.read vec px
 
 -- }}}
@@ -568,68 +578,39 @@ decrementMS k (n, im) =
 
 type Graph = Array Int [Int]
 
--- | [Tree only] Searches through all the posible routes.
-{-# INLINE dfsAll #-}
-dfsAll :: forall s. (Int -> s -> s) -> s -> Graph -> Int -> [s]
-dfsAll !f !s0 !graph !start = snd $ visitNode s0 (IS.empty, []) start
+dfsEveryVertex :: forall s. (s -> Bool, s -> Int -> s, s -> Int -> s) -> Graph -> Int -> s -> (s, IS.IntSet)
+dfsEveryVertex (isEnd, fin, fout) graph start s0 = visitNode (s0, IS.empty) start
   where
-    visitNode :: s -> (IS.IntSet, [s]) -> Int -> (IS.IntSet, [s])
-    visitNode !s (!visits, !results) !x =
-      let -- !_ = traceShow x ()
-          !visits' = IS.insert x visits
-          !s' = f x s
-       in visitNeighbors s' (visits', results) x
+    visitNode :: (s, IS.IntSet) -> Int -> (s, IS.IntSet)
+    visitNode (s, visits) x
+      | isEnd s = (s, visits)
+      | otherwise =
+        let (s', visits') = visitNeighbors (fin s x, IS.insert x visits) x
+         in (fout s' x, visits')
 
-    visitNeighbors :: s -> (IS.IntSet, [s]) -> Int -> (IS.IntSet, [s])
-    visitNeighbors !s (!visits, !results) !x =
-      let -- !_ = traceShow x ()
-          nbs = filter (\n -> not $ IS.member n visits) (graph ! x)
-       in if null nbs
-            then (visits, s : results)
-            else
-              foldl'
-                ( \(!vs, !rs) !n ->
-                    -- TODO: remove this branch. it's for graphs:
-                    if IS.member n vs
-                      then -- discard duplicates
-                        (vs, rs)
-                      else visitNode s (visits, rs) n
-                )
-                (visits, results)
-                nbs
+    visitNeighbors :: (s, IS.IntSet) -> Int -> (s, IS.IntSet)
+    visitNeighbors (s, visits) x
+      | isEnd s = (s, visits)
+      | otherwise =
+        foldl' visitNode (s, visits) $ filter (`IS.notMember` visits) (graph ! x)
 
--- | Searches for a specific route in depth-first order.
-{-# INLINE dfsFind #-}
-dfsFind :: forall s. (Int -> s -> (Bool, s)) -> s -> Graph -> Int -> Maybe s
-dfsFind !f !s0 !graph !start = snd $ visitNode s0 IS.empty start
+dfsEveryPath :: forall s. (s -> Bool, s -> Int -> s, s -> Int -> s) -> Graph -> Int -> s -> s
+dfsEveryPath (isEnd, fin, fout) graph start s0 = visitNode (s0, IS.empty) start
   where
-    visitNode :: s -> IS.IntSet -> Int -> (IS.IntSet, Maybe s)
-    visitNode !s !visits !x =
-      let -- !_ = traceShow x ()
-          visits' = IS.insert x visits
-          (goal, s') = f x s
-       in if goal
-            then (visits', Just s')
-            else visitNeighbors s' visits' x
+    visitNode :: (s, IS.IntSet) -> Int -> s
+    visitNode (s, visits) x
+      | isEnd s = s
+      | otherwise = flip fout x $ visitNeighbors (fin s x, IS.insert x visits) x
 
-    visitNeighbors :: s -> IS.IntSet -> Int -> (IS.IntSet, Maybe s)
-    visitNeighbors s visits x =
-      let -- !_ = traceShow x ()
-          !nbs = filter (\n -> not $ IS.member n visits) (graph ! x)
-       in foldl'
-            ( \(!vs, !result) !n ->
-                if isJust result || IS.member n vs
-                  then (vs, result)
-                  else visitNode s visits n
-            )
-            (visits, Nothing)
-            nbs
-
--- TODO: test it
+    visitNeighbors :: (s, IS.IntSet) -> Int -> s
+    visitNeighbors (s, visits) x
+      | isEnd s = s
+      | otherwise =
+        foldl' (\s2 n -> visitNode (s2, visits) n) s $ filter (`IS.notMember` visits) (graph ! x)
 
 -- | Searches for a specific route in breadth-first order.
 -- | Returns `Just (depth, node)` if succeed.
-{-# INLINE bfsFind #-}
+-- TODO: refactor / test it
 bfsFind :: (Int -> Bool) -> Graph -> Int -> Maybe (Int, Int)
 bfsFind !f !graph !start =
   if f start
@@ -690,25 +671,120 @@ dijkstra !f s0 !graph !start =
 
 -- }}}
 
+-- {{{ Prime factors
+
+-- | CAUTION: Be aware of the accuracy. Prefer binary search when possible
+isqrt :: Int -> Int
+isqrt = floor @Double . sqrt . fromIntegral
+
+-- @gotoki_no_joe
+primes :: [Int]
+primes = 2 : 3 : sieve q0 [5, 7 ..]
+  where
+    q0 = H.insert (H.Entry 9 6) H.empty
+    sieve queue xxs@(x : xs) =
+      case compare np x of
+        LT -> sieve queue1 xxs
+        EQ -> sieve queue1 xs
+        GT -> x : sieve queue2 xs
+      where
+        H.Entry np p2 = H.minimum queue
+        queue1 = H.insert (H.Entry (np + p2) p2) $ H.deleteMin queue
+        queue2 = H.insert (H.Entry (x * x) (x * 2)) queue
+
+-- | Returns `[(prime, count)]`
+-- TODO: reuse `primes`
+primeFactors :: Int -> [(Int, Int)]
+primeFactors n_ = map (\xs -> (head xs, length xs)) . group $ loop n_ input
+  where
+    input = 2 : 3 : [y | x <- [5, 11 ..], y <- [x, x + 2]]
+    loop n pps@(p : ps)
+      | n == 1 = []
+      | n < p * p = [n]
+      | r == 0 = p : loop q pps
+      | otherwise = loop n ps
+      where
+        (q, r) = divMod n p
+
+-- }}}
+
+-- {{{ Modulo arithmetic
+
+addMod, subMod, mulMod :: Int -> Int -> Int -> Int
+addMod x a modulus = (x + a) `mod` modulus
+subMod x s modulus = (x - s) `mod` modulus
+mulMod b p modulus = (b * p) `mod` modulus
+
+-- | n! `mod` m
+factMod :: Int -> Int -> Int
+factMod 0 _ = 1
+factMod 1 _ = 1
+factMod n m = n * factMod (n - 1) m `rem` m
+
+-- F: Fermet, FC: Fermet by cache
+
+-- | x / d mod p, using Fermat's little theorem
+-- |
+-- | 1/d = d^{p-2} (mod p) <=> d^p = d (mod p)
+-- |   where the modulus is a prime number and `x` is not a mulitple of `p`
+invModF :: Int -> Int -> Int
+invModF d modulus = invModFC modulus (powerModCache d modulus)
+
+-- | x / d mod p, using Fermat's little theorem
+-- |
+-- | 1/d = d^{p-2} (mod p) <=> d^p = d (mod p)
+-- |   where the modulus is a prime number and `x` is not a mulitple of `p`
+divModF :: Int -> Int -> Int -> Int
+divModF x d modulus = x * divModFC x (powerModCache d modulus) `rem` modulus
+
+-- | Cache of base^i for iterative square method
+powerModCache :: Int -> Int -> (Int, VU.Vector Int)
+powerModCache base modulo = (modulo, VU.fromList $ scanl' (\x _ -> x * x `rem` modulo) base [1 .. 62])
+
+-- | Calculates base^i (mod p) from a cache
+powerByCache :: Int -> (Int, VU.Vector Int) -> Int
+powerByCache power (modulo, cache) = foldl' step 1 [0 .. 62]
+  where
+    step acc nBit =
+      if testBit power nBit
+        then acc * (cache VU.! nBit) `rem` modulo
+        else acc
+
+-- | 1/x = x^{p-2} mod p <=> x^p = x mod p
+-- |   where the modulus is a prime number
+-- |
+-- | and x^{p-2} is calculated with cache
+invModFC :: Int -> (Int, VU.Vector Int) -> Int
+invModFC primeModulus = powerByCache (primeModulus - 2)
+
+divModFC :: Int -> (Int, VU.Vector Int) -> Int
+divModFC x context@(modulus, _) = x * invModFC modulus context `rem` modulus
+
+-- }}}
+
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [n] <- getLineIntList
+  -- players ! iPlayer ! iSpan
+  players <- V.replicateM n (VU.map pred <$> getLineIntVec)
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  let getIndex x y = 1000 * x + y
 
-  -- let !_ = traceShow doubling ()
+  [m] <- getLineIntList
+  banned <-
+    IS.fromList
+      . concatMap (\[x, y] -> [getIndex x y, getIndex y x])
+      <$> replicateM m (map pred <$> getLineIntList)
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
+  let result = minimum $ map (fst . foldl' f s0) ps
+      ps :: [[(Int, Int)]]
+      ps = map (zip [0 :: Int ..]) (permutations [0 :: Int .. pred n])
+      s0 = (0 :: Int, -1 :: Int)
+      f :: (Int, Int) -> (Int, Int) -> (Int, Int)
+      f (-1, _) _ = (-1, -1)
+      f (s, lastPlayer) (iSpan, player) =
+        if IS.member (getIndex lastPlayer player) banned
+          then (-1, -1)
+          else (s + players V.! player VU.! iSpan, player)
 
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---
+  print result

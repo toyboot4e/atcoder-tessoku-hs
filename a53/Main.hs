@@ -658,57 +658,22 @@ bfsFind !f !graph !start =
             (Nothing, IS.empty)
             nbsList
 
--- | Weighted graph (Entry priority payload)
-type WGraph = Array Int [IHeapEntry]
-
--- | Int heap
-type IHeap = H.Heap IHeapEntry
-
--- | Int entry
-type IHeapEntry = H.Entry Int Int
-
-dijkstra :: forall s. (s -> IHeapEntry -> s) -> s -> WGraph -> Int -> s
-dijkstra !f s0 !graph !start =
-  let (s, _, _) = visitRec (s0, IS.empty, H.singleton $ H.Entry 0 start)
-   in s
-  where
-    visitRec :: (s, IS.IntSet, IHeap) -> (s, IS.IntSet, IHeap)
-    visitRec (!s, !visits, !nbs) =
-      case H.uncons nbs of
-        Just (x, nbs') ->
-          if IS.member (H.payload x) visits
-            then visitRec (s, visits, nbs')
-            else visitRec $ visitNode (s, visits, nbs') x
-        Nothing -> (s, visits, nbs)
-
-    visitNode :: (s, IS.IntSet, IHeap) -> IHeapEntry -> (s, IS.IntSet, IHeap)
-    visitNode (!s, !visits, !nbs) entry@(H.Entry cost x) =
-      let visits' = IS.insert x visits
-          news = H.fromList . map (first (cost +)) . filter p $ graph ! x
-          p = not . (`IS.member` visits') . H.payload
-       in (f s entry, visits', H.union nbs news)
-
 -- }}}
 
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
+  [q] <- getLineIntList
   queries <- replicateM q getLineIntList
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  let results = fst $ foldl' step s0 queries
+      s0 = ([], H.empty)
+      step (acc, xs) query = case query of
+        -- insert
+        [1, x] -> (acc, H.insert x xs)
+        -- answer
+        [2] -> (H.minimum xs : acc, xs)
+        -- delete
+        [3] -> (acc, H.deleteMin xs)
+        _ -> error "unreachable"
 
-  -- let !_ = traceShow doubling ()
-
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
-
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---
+  putStrLn $ intercalate "\n" (map show $ reverse results)

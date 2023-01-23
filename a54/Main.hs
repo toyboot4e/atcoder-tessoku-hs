@@ -692,23 +692,19 @@ dijkstra !f s0 !graph !start =
 
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [nQueries] <- getLineIntList
+  queries <- replicateM nQueries (words <$> getLine)
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  -- 1: insert k v
+  -- 2: delete k
 
-  -- let !_ = traceShow doubling ()
+  let results = reverse . fst $ foldl' step s0 queries
+      s0 = ([], HM.empty)
+      step :: ([String], HM.HashMap String String) -> [String] -> ([String], HM.HashMap String String)
+      step (answers, acc) query = case query of
+        ["1", k, v] -> (answers, HM.insert k v acc)
+        ["2", k] -> (acc HM.! k : answers, acc)
+        _ -> error "unreachable"
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
+  putStrLn $ intercalate "\n" results
 
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---

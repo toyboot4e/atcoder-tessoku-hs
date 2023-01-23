@@ -69,6 +69,8 @@ import qualified Data.Vector.Algorithms.Search as VAS
 import qualified Data.IntMap.Strict as IM
 import qualified Data.Map.Strict as M
 import qualified Data.IntSet as IS
+import qualified Data.Set as S
+import qualified Data.Sequence as Seq
 
 -- heaps: https://www.stackage.org/haddock/lts-16.11/heaps-0.3.6.1/Data-Heap.html
 import qualified Data.Heap as H
@@ -690,25 +692,51 @@ dijkstra !f s0 !graph !start =
 
 -- }}}
 
+-- {{{ Integer
+
+isqrt :: Int -> Int
+isqrt = floor @Double . sqrt . fromIntegral
+
+-- @gotoki_no_joe
+primes :: [Int]
+primes = 2 : 3 : sieve q0 [5, 7 ..]
+  where
+    q0 = H.insert (H.Entry 9 6) H.empty
+    sieve queue xxs@(x : xs) =
+      case compare np x of
+        LT -> sieve queue1 xxs
+        EQ -> sieve queue1 xs
+        GT -> x : sieve queue2 xs
+      where
+        H.Entry np p2 = H.minimum queue
+        queue1 = H.insert (H.Entry (np + p2) p2) $ H.deleteMin queue
+        queue2 = H.insert (H.Entry (x * x) (x * 2)) queue
+
+-- | Returns `[(prime, count)]`
+-- @gotoki_no_joe
+primeFactors :: Int -> [(Int, Int)]
+primeFactors n_ = map (\xs -> (head xs, length xs)) . group $ loop n_ input
+  where
+    input = 2 : 3 : [y | x <- [5, 11 ..], y <- [x, x + 2]]
+    loop n pps@(p : ps)
+      | n == 1 = []
+      | n < p * p = [n]
+      | r == 0 = p : loop q pps
+      | otherwise = loop n ps
+      where
+        (q, r) = divMod n p
+
+-- }}}
+
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [q] <- getLineIntList
+  xs <- concat <$> replicateM q getLineIntList
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  let ps = VU.fromList $ takeWhile (< 300_000) primes
 
-  -- let !_ = traceShow doubling ()
+  let isPrime x =
+        x == ps VU.! (fromJust . fst $ bsearch (0, VU.length ps - 1) (\i -> ps VU.! i <= x))
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
-
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---
+  forM_ xs $ \x -> do
+    putStrLn if isPrime x then "Yes" else "No"

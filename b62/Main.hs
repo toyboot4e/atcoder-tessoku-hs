@@ -1,7 +1,7 @@
 #!/usr/bin/env stack
 {- stack script --resolver lts-16.11
 --package array --package bytestring --package containers
---package hashable --package unordered-containers --package heaps
+--package hashable --package unordered-containers
 --package vector --package vector-algorithms --package primitive --package transformers
 -}
 
@@ -69,9 +69,6 @@ import qualified Data.Vector.Algorithms.Search as VAS
 import qualified Data.IntMap.Strict as IM
 import qualified Data.Map.Strict as M
 import qualified Data.IntSet as IS
-
--- heaps: https://www.stackage.org/haddock/lts-16.11/heaps-0.3.6.1/Data-Heap.html
-import qualified Data.Heap as H
 
 -- hashable: https://www.stackage.org/lts-16.11/package/hashable-1.3.0.0
 import Data.Hashable
@@ -591,14 +588,14 @@ dfsAll !f !s0 !graph !start = snd $ visitNode s0 (IS.empty, []) start
                 ( \(!vs, !rs) !n ->
                     -- TODO: remove this branch. it's for graphs:
                     if IS.member n vs
-                      then -- discard duplicates
-                        (vs, rs)
+                      -- discard duplicates
+                      then (vs, rs)
                       else visitNode s (visits, rs) n
                 )
                 (visits, results)
                 nbs
 
--- | Searches for a specific route in depth-first order.
+-- | Searches for a specific route.
 {-# INLINE dfsFind #-}
 dfsFind :: forall s. (Int -> s -> (Bool, s)) -> s -> Graph -> Int -> Maybe s
 dfsFind !f !s0 !graph !start = snd $ visitNode s0 IS.empty start
@@ -616,99 +613,33 @@ dfsFind !f !s0 !graph !start = snd $ visitNode s0 IS.empty start
     visitNeighbors s visits x =
       let -- !_ = traceShow x ()
           !nbs = filter (\n -> not $ IS.member n visits) (graph ! x)
-       in foldl'
-            ( \(!vs, !result) !n ->
-                if isJust result || IS.member n vs
-                  then (vs, result)
-                  else visitNode s visits n
-            )
-            (visits, Nothing)
-            nbs
-
--- TODO: test it
-
--- | Searches for a specific route in breadth-first order.
--- | Returns `Just (depth, node)` if succeed.
-{-# INLINE bfsFind #-}
-bfsFind :: (Int -> Bool) -> Graph -> Int -> Maybe (Int, Int)
-bfsFind !f !graph !start =
-  if f start
-    then Just (0, start)
-    else bfsRec 1 (IS.singleton start) (IS.fromList $ graph ! start)
-  where
-    bfsRec :: Int -> IS.IntSet -> IS.IntSet -> Maybe (Int, Int)
-    bfsRec depth !visits !nbs =
-      let -- !_ = traceShow x ()
-          !visits' = foldl' (flip IS.insert) visits (IS.toList nbs)
-       in let (result, nextNbs) = visitNeighbors nbs
-           in case result of
-                Just x -> Just (depth, x)
-                Nothing -> bfsRec (succ depth) visits' nextNbs
-    visitNeighbors :: IS.IntSet -> (Maybe Int, IS.IntSet)
-    visitNeighbors nbs =
-      let -- !_ = traceShow x ()
-          !nbsList = IS.toList nbs
-       in foldl'
-            ( \(!result, !nbs') !x ->
-                let nbs'' = IS.insert x nbs'
-                 in if f x
-                      then (Just x, nbs'')
-                      else (result, nbs'')
-            )
-            (Nothing, IS.empty)
-            nbsList
-
--- | Weighted graph (Entry priority payload)
-type WGraph = Array Int [IHeapEntry]
-
--- | Int heap
-type IHeap = H.Heap IHeapEntry
-
--- | Int entry
-type IHeapEntry = H.Entry Int Int
-
-dijkstra :: forall s. (s -> IHeapEntry -> s) -> s -> WGraph -> Int -> s
-dijkstra !f s0 !graph !start =
-  let (s, _, _) = visitRec (s0, IS.empty, H.singleton $ H.Entry 0 start)
-   in s
-  where
-    visitRec :: (s, IS.IntSet, IHeap) -> (s, IS.IntSet, IHeap)
-    visitRec (!s, !visits, !nbs) =
-      case H.uncons nbs of
-        Just (x, nbs') ->
-          if IS.member (H.payload x) visits
-            then visitRec (s, visits, nbs')
-            else visitRec $ visitNode (s, visits, nbs') x
-        Nothing -> (s, visits, nbs)
-
-    visitNode :: (s, IS.IntSet, IHeap) -> IHeapEntry -> (s, IS.IntSet, IHeap)
-    visitNode (!s, !visits, !nbs) entry@(H.Entry cost x) =
-      let visits' = IS.insert x visits
-          news = H.fromList . map (first (cost +)) . filter p $ graph ! x
-          p = not . (`IS.member` visits') . H.payload
-       in (f s entry, visits', H.union nbs news)
+       in if null nbs
+            then (visits, Nothing)
+            else
+              foldl'
+                ( \(!vs, !result) !n ->
+                    if isJust result || IS.member n vs
+                      then (vs, result)
+                      else visitNode s visits n
+                )
+                (visits, Nothing)
+                nbs
 
 -- }}}
 
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [nVerts, nEdges] <- getLineIntList
+  input <- concatMap (\[a, b] -> [(a, b), (b, a)]) <$> replicateM nEdges getLineIntList
+  let graph = accumArray @Array (flip (:)) [] (1, nVerts) input
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  -- let route = fromJust $ dfsFind f [] graph 1
+  --     f x log_ = (x == nVerts, x : log_)
 
-  -- let !_ = traceShow doubling ()
+  let results = dfsAll f (False, []) graph nVerts
+      f x (b, xs) = (b || x == 1, x : xs)
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
+  let routes = snd . head $ filter fst results
+  let route = dropWhile (/= nVerts) routes
 
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---
+  putStrLn $ unwords $ map show route

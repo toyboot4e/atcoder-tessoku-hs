@@ -1,0 +1,6502 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           atcoder-tessoku-hs
+version:        0.0.0
+build-type:     Simple
+
+executable a01-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a01
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a02-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a02
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a03-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a03
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a04-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a04
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a05-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a05
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a06-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a06
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a07-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a07
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a08-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a08
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a09-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a09
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a10-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a10
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a11-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a11
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a12-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a12
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a13-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a13
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a14-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a14
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a15-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a15
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a16-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a16
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a17-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a17
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a18-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a18
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a19-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a19
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a20-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a20
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a21-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a21
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a22-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a22
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a23-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a23
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a24-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a24
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a25-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a25
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a26-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a26
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a27-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a27
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a28-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a28
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a29-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a29
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a30-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a30
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a31-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a31
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a32-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a32
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a33-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a33
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a34-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a34
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a35-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a35
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a36-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a36
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a37-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a37
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a38-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a38
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a39-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a39
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a40-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a40
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a41-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a41
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a42-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a42
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a43-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a43
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a44-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a44
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a45-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a45
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a46-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a46
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a49-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a49
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a50-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a50
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a51-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a51
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a52-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a52
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a53-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a53
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a54-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a54
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a55-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a55
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a56-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a56
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a57-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a57
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a58-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a58
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a59-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a59
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a60-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a60
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a61-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a61
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a62-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a62
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a63-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a63
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a64-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a64
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a65-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a65
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a66-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a66
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a67-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a67
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a68-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a68
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a69-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a69
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a70-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a70
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a71-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a71
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a72-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a72
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a73-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a73
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a74-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a74
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a75-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a75
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a76-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a76
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable a77-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      a77
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b01-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b01
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b02-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b02
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b03-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b03
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b04-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b04
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b06-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b06
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b07-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b07
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b08-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b08
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b09-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b09
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b11-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b11
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b12-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b12
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b13-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b13
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b14-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b14
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b16-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b16
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b17-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b17
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b18-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b18
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b19-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b19
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b20-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b20
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b21-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b21
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b23-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b23
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b24-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b24
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b26-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b26
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b27-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b27
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b28-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b28
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b29-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b29
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b30-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b30
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b31-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b31
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b32-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b32
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b33-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b33
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b34-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b34
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b36-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b36
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b37-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b37
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b38-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b38
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b39-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b39
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b40-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b40
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b41-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b41
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b42-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b42
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b43-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b43
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b44-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b44
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b45-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b45
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b51-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b51
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b52-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b52
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b54-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b54
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b55-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b55
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b56-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b56
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b57-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b57
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b58-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b58
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b59-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b59
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b61-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b61
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b62-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b62
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b63-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b63
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b64-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b64
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b65-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b65
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b66-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b66
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b67-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b67
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b68-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b68
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable b69-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      b69
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c01-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c01
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c02-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c02
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c03-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c03
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c04-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c04
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c05-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c05
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c06-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c06
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c07-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c07
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c08-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c08
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c09-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c09
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c10-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c10
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c11-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c11
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c12-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c12
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c13-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c13
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c14-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c14
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c15-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c15
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c16-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c16
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c17-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c17
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c18-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c18
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c19-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c19
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010
+
+executable c20-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      c20
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      QuickCheck
+    , array
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , fgl
+    , hashable
+    , heaps
+    , integer-logarithms
+    , lens
+    , massiv
+    , mono-traversable
+    , mtl
+    , mutable-containers
+    , mwc-random
+    , parallel
+    , parsec
+    , primitive
+    , psqueues
+    , random
+    , reflection
+    , repa
+    , template-haskell
+    , text
+    , tf-random
+    , transformers
+    , unboxing-vector
+    , unordered-containers
+    , utility-ht
+    , vector
+    , vector-algorithms
+    , vector-th-unbox
+  default-language: Haskell2010

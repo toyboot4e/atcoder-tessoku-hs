@@ -692,23 +692,10 @@ dijkstra !f s0 !graph !start =
 
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [n] <- getLineIntList
+  input <- zipWith (\a b -> (b, a)) [(2 :: Int) ..] <$> getLineIntList
+  let subordinates = accumArray @Array (flip (:)) [] (1, n) input
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  let dp = listArray @Array (1, n) [length xs + sum (map (dp !) xs) | i <- [1 .. n], let xs = subordinates ! i]
+  putStrLn . unwords . map show $ elems dp
 
-  -- let !_ = traceShow doubling ()
-
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
-
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---

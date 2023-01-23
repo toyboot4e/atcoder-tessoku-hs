@@ -1,7 +1,7 @@
 #!/usr/bin/env stack
 {- stack script --resolver lts-16.11
 --package array --package bytestring --package containers
---package hashable --package unordered-containers --package heaps
+--package hashable --package unordered-containers
 --package vector --package vector-algorithms --package primitive --package transformers
 -}
 
@@ -69,9 +69,6 @@ import qualified Data.Vector.Algorithms.Search as VAS
 import qualified Data.IntMap.Strict as IM
 import qualified Data.Map.Strict as M
 import qualified Data.IntSet as IS
-
--- heaps: https://www.stackage.org/haddock/lts-16.11/heaps-0.3.6.1/Data-Heap.html
-import qualified Data.Heap as H
 
 -- hashable: https://www.stackage.org/lts-16.11/package/hashable-1.3.0.0
 import Data.Hashable
@@ -658,57 +655,48 @@ bfsFind !f !graph !start =
             (Nothing, IS.empty)
             nbsList
 
--- | Weighted graph (Entry priority payload)
-type WGraph = Array Int [IHeapEntry]
-
--- | Int heap
-type IHeap = H.Heap IHeapEntry
-
--- | Int entry
-type IHeapEntry = H.Entry Int Int
-
-dijkstra :: forall s. (s -> IHeapEntry -> s) -> s -> WGraph -> Int -> s
-dijkstra !f s0 !graph !start =
-  let (s, _, _) = visitRec (s0, IS.empty, H.singleton $ H.Entry 0 start)
-   in s
-  where
-    visitRec :: (s, IS.IntSet, IHeap) -> (s, IS.IntSet, IHeap)
-    visitRec (!s, !visits, !nbs) =
-      case H.uncons nbs of
-        Just (x, nbs') ->
-          if IS.member (H.payload x) visits
-            then visitRec (s, visits, nbs')
-            else visitRec $ visitNode (s, visits, nbs') x
-        Nothing -> (s, visits, nbs)
-
-    visitNode :: (s, IS.IntSet, IHeap) -> IHeapEntry -> (s, IS.IntSet, IHeap)
-    visitNode (!s, !visits, !nbs) entry@(H.Entry cost x) =
-      let visits' = IS.insert x visits
-          news = H.fromList . map (first (cost +)) . filter p $ graph ! x
-          p = not . (`IS.member` visits') . H.payload
-       in (f s entry, visits', H.union nbs news)
-
 -- }}}
+
+type Node = (Int, Int)
 
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [h, w] <- getLineIntList
+  start <- (\[a, b] -> (a, b)) <$> getLineIntList
+  goal <- (\[a, b] -> (a, b)) <$> getLineIntList
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  input <- concat <$> replicateM h (map (== '#') <$> getLine)
+  let blocks = listArray @UArray ((1, 1), (h, w)) input
 
-  -- let !_ = traceShow doubling ()
+  let bfs :: Int -> IS.IntSet -> IS.IntSet -> Int
+      bfs depth visits nbs =
+        let nbsList = IS.toList nbs
+            visits' = foldl' (flip IS.insert) visits (IS.toList nbs)
+            (isEnd, nbs') = foldl' (step visits) (False, IS.empty) nbsList
+         in if isEnd
+              then depth
+              else bfs (succ depth) visits' nbs'
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
+      step :: IS.IntSet -> (Bool, IS.IntSet) -> Int -> (Bool, IS.IntSet)
+      step _ (True, _) _ = (True, IS.empty)
+      step visits (isEnd, nbs) pos =
+        if
+            | pos == toIndex goal -> (True, IS.empty)
+            | IS.member pos visits -> (isEnd, nbs)
+            | otherwise -> (isEnd, IS.union nbs (IS.fromList . filter (not . flip IS.member visits) $ neighbors (toPos pos)))
 
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
+      neighbors :: Node -> [Int]
+      neighbors (y, x) = map toIndex . filter (\pos -> inRange bounds_ pos && not (blocks ! pos)) $ map (bimap (y +) (x +)) deltas
+        where
+          deltas = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
---
+      bounds_ :: (Node, Node)
+      bounds_ = ((1, 1), (h, w))
+
+      toIndex :: Node -> Int
+      toIndex = index bounds_
+
+      toPos :: Int -> Node
+      toPos i = (i `div` w + 1, i `rem` w + 1)
+
+  print $ bfs 1 (IS.singleton (toIndex start)) (IS.fromList $ neighbors start)

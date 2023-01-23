@@ -69,6 +69,7 @@ import qualified Data.Vector.Algorithms.Search as VAS
 import qualified Data.IntMap.Strict as IM
 import qualified Data.Map.Strict as M
 import qualified Data.IntSet as IS
+import qualified Data.Sequence as Seq
 
 -- heaps: https://www.stackage.org/haddock/lts-16.11/heaps-0.3.6.1/Data-Heap.html
 import qualified Data.Heap as H
@@ -692,23 +693,19 @@ dijkstra !f s0 !graph !start =
 
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [nQueries] <- getLineIntList
+  queries <- replicateM nQueries (words <$> getLine)
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  -- 1: enqueue
+  -- 2: peek
+  -- 3: dequeue
 
-  -- let !_ = traceShow doubling ()
+  let result = reverse . fst $ foldl' step s0 queries
+      s0 = ([], Seq.empty)
+      step (answers, acc) q = case (q, acc) of
+        (["1", x], _) -> (answers, acc Seq.|> x)
+        (["2"], x Seq.:<| _) -> (x : answers, acc)
+        (["3"], _ Seq.:<| acc') -> (answers, acc')
+        _ -> error "unreachable"
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
-
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---
+  putStrLn $ intercalate "\n" result

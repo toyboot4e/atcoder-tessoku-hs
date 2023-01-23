@@ -693,22 +693,32 @@ dijkstra !f s0 !graph !start =
 main :: IO ()
 main = do
   [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
+  s <- map ord <$> getLine
   queries <- replicateM q getLineIntList
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  let b = 100
+  let bMod = 10 ^ (9 :: Int) + 7
 
-  -- let !_ = traceShow doubling ()
+  let hashes = VU.fromList $ scanl' step 0 s
+      step acc x = (b * acc + x) `rem` bMod
 
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
+  let powers = VU.fromList $ scanl' step_ 1 [1 .. n]
+      step_ acc _ = b * acc `rem` bMod
 
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
+  let hashSlice l r =
+        -- REMARK: The power calculation can be too slow / needs modulo operations
+        -- let power = b ^ (r - l + 1)
+        let power = powers VU.! (r - l + 1)
+            h1r = hashes VU.! r
+            h1l_ = hashes VU.! (l - 1)
+         in (h1r - (power * h1l_ `rem` bMod)) `mod` bMod
 
---
+  -- let !_ = traceShow hashes ()
+
+  forM_ queries $ \query -> do
+    let [l1, r1, l2, r2] = query
+    -- let !_ = traceShow (hashSlice l1 r1, hashSlice l2 r2) ()
+    putStrLn
+      if hashSlice l1 r1 == hashSlice l2 r2
+        then "Yes"
+        else "No"

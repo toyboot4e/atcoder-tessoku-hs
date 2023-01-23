@@ -692,23 +692,13 @@ dijkstra !f s0 !graph !start =
 
 main :: IO ()
 main = do
-  [n, q] <- getLineIntList
-  moves <- VU.fromList . map pred <$> getLineIntList
-  queries <- replicateM q getLineIntList
+  [n, m] <- getLineIntList
+  input <- concatMap (\[a, b, c] -> [(a, H.Entry c b), (b, H.Entry c a)]) <$> replicateM m getLineIntList
+  let graph = accumArray @Array (flip (:)) [] (1, n) input
 
-  -- 2 ^ 30 > 10 ^ 9
-  let doubling = V.scanl' step moves (V.fromList [(1 :: Int) .. 30])
-      step xs _ = VU.fromList $ map (\i -> xs VU.! (xs VU.! i)) [0 .. (pred n)]
+  let result = dijkstra f IM.empty graph 1
+      f im (H.Entry v k) = IM.insert k v im
 
-  -- let !_ = traceShow doubling ()
-
-  let solve x i = foldl' (step_ i) x [(0 :: Int) .. 30]
-      step_ k acc i =
-        if testBit k i
-          then doubling V.! i VU.! acc
-          else acc
-
-  forM_ queries $ \[x, i] -> do
-     print . succ $ solve (pred x) i
-
---
+  forM_ [1 .. n] $ \i -> do
+    let x = fromMaybe (-1) $ IM.lookup i result
+    print x
