@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack script --resolver lts-16.11 --package bytestring --package vector --package vector-algorithms --package containers --package array --package primitive
+-- stack script --resolver lts-16.31 --package bytestring --package vector --package vector-algorithms --package containers --package array --package primitive
 
 {-# LANGUAGE BangPatterns #-}
 {-# LANGUAGE FlexibleInstances #-}
@@ -28,14 +28,14 @@ import Data.Maybe
 
 {- ORMOLU_DISABLE -}
 
--- bits: https://www.stackage.org/lts-16.11/package/bits-0.5.2
+-- bits: https://www.stackage.org/lts-16.31/package/bits-0.5.2
 import Data.Bits
 
--- bytestring: https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0
+-- bytestring: https://www.stackage.org/lts-16.31/package/bytestring-0.10.10.0
 import qualified Data.ByteString.Builder as BSB
 import qualified Data.ByteString.Char8 as BS
 
--- vector: https://www.stackage.org/lts-16.11/package/vector-0.12.1.2
+-- vector: https://www.stackage.org/lts-16.31/package/vector-0.12.1.2
 import qualified Data.Vector.Unboxed as VU
 import qualified Data.Vector.Unboxed.Mutable as VUM
 import qualified Data.Vector as V

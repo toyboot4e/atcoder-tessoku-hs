@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack script --resolver lts-16.11
+-- stack script --resolver lts-16.31
 
 import Control.Monad
 import Data.Char

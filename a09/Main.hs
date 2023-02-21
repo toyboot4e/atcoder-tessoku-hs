@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack script --resolver lts-16.11 --package bytestring --package vector --package containers --package array
+-- stack script --resolver lts-16.31 --package bytestring --package vector --package containers --package array
 
 {-# LANGUAGE BangPatterns #-}
 

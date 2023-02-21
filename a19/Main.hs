@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
-{- stack script --resolver lts-16.11 --package array --package bytestring  --package vector -}
+{- stack script --resolver lts-16.31 --package array --package bytestring  --package vector -}
 
 {- ORMOLU_DISABLE -}
 {-# LANGUAGE FlexibleContexts, FlexibleInstances, MultiParamTypeClasses, QuantifiedConstraints, RankNTypes #-}

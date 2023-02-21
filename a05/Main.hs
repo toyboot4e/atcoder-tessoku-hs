@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack script --resolver lts-16.11
+-- stack script --resolver lts-16.31
 
 getLineIntList :: IO [Int]
 getLineIntList = map read . words <$> getLine

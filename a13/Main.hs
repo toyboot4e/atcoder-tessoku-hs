@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack script --resolver lts-16.11 --package bytestring --package vector --package vector-algorithms --package containers --package array
+-- stack script --resolver lts-16.31 --package bytestring --package vector --package vector-algorithms --package containers --package array
 
 {-# LANGUAGE ScopedTypeVariables #-}
 
@@ -10,10 +10,10 @@ import Data.Maybe
 
 {- ORMOLU_DISABLE -}
 
--- bytestring: https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0
+-- bytestring: https://www.stackage.org/lts-16.31/package/bytestring-0.10.10.0
 import qualified Data.ByteString.Char8 as BS
 
--- vector: https://www.stackage.org/lts-16.11/package/vector-0.12.1.2
+-- vector: https://www.stackage.org/lts-16.31/package/vector-0.12.1.2
 import qualified Data.Vector.Unboxed as VU
 
 {- ORMOLU_ENABLE -}

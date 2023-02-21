@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack script --resolver lts-16.11 --package vector --package primitive
+-- stack script --resolver lts-16.31 --package vector --package primitive
 
 {-# LANGUAGE BangPatterns, TypeFamilies, MultiParamTypeClasses #-}
 

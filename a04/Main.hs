@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack script --resolver lts-16.11
+-- stack script --resolver lts-16.31
 
 -- https://hackage.haskell.org/package/base-4.13.0.0/docs/Data-Bits.html
 import Data.Bits

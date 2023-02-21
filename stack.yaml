@@ -1,6 +1,4 @@
 system-ghc: true
-resolver: lts-16.11
+resolver: lts-16.31
 packages:
 - .
-extra-deps:
-- repa-3.4.1.4
