@@ -45,11 +45,11 @@ import qualified Data.Array.MArray as MA
 import qualified Data.Array.IArray as IA
 import qualified Data.Array.ST as STA
 
--- bytestring: https://www.stackage.org/lts-16.31/package/bytestring-0.10.10.0
+-- bytestring: https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0
 import qualified Data.ByteString.Builder as BSB
 import qualified Data.ByteString.Char8 as BS
 
--- vector: https://www.stackage.org/lts-16.31/package/vector-0.12.1.2
+-- vector: https://www.stackage.org/lts-16.11/package/vector-0.12.1.2
 import qualified Data.Vector.Fusion.Bundle as VFB
 import qualified Data.Vector.Generic as VG
 import qualified Data.Vector.Unboxed as VU
@@ -60,7 +60,7 @@ import qualified Data.Vector.Mutable as VM
 -- vector-algorithms: https://www.stackage.org/haddock/lts-16.31/vector-algorithms-0.8.0.3/Data-Vector-Algorithms-Intro.html
 import qualified Data.Vector.Algorithms.Intro as VAI
 
--- containers: https://www.stackage.org/lts-16.31/package/containers-0.6.2.1
+-- containers: https://www.stackage.org/lts-16.11/package/containers-0.6.2.1
 import qualified Data.IntMap.Strict as IM
 import qualified Data.Map.Strict as M
 import qualified Data.IntSet as IS

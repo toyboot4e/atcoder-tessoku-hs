@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
 cd "$1"
-acc submit -s -- -y
-
+npx acc submit -s -- -y
 

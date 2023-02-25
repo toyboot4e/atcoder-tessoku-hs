@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.1.
+-- This file has been generated from package.yaml by hpack version 0.35.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -38,7 +38,6 @@ executable a01-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -81,7 +80,6 @@ executable a02-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -124,7 +122,6 @@ executable a03-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -167,7 +164,6 @@ executable a04-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -210,7 +206,6 @@ executable a05-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -253,7 +248,6 @@ executable a06-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -296,7 +290,6 @@ executable a07-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -339,7 +332,6 @@ executable a08-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -382,7 +374,6 @@ executable a09-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -425,7 +416,6 @@ executable a10-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -468,7 +458,6 @@ executable a11-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -511,7 +500,6 @@ executable a12-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -554,7 +542,6 @@ executable a13-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -597,7 +584,6 @@ executable a14-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -640,7 +626,6 @@ executable a15-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -683,7 +668,6 @@ executable a16-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -726,7 +710,6 @@ executable a17-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -769,7 +752,6 @@ executable a18-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -812,7 +794,6 @@ executable a19-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -855,7 +836,6 @@ executable a20-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -898,7 +878,6 @@ executable a21-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -941,7 +920,6 @@ executable a22-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -984,7 +962,6 @@ executable a23-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1027,7 +1004,6 @@ executable a24-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1070,7 +1046,6 @@ executable a25-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1113,7 +1088,6 @@ executable a26-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1156,7 +1130,6 @@ executable a27-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1199,7 +1172,6 @@ executable a28-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1242,7 +1214,6 @@ executable a29-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1285,7 +1256,6 @@ executable a30-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1328,7 +1298,6 @@ executable a31-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1371,7 +1340,6 @@ executable a32-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1414,7 +1382,6 @@ executable a33-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1457,7 +1424,6 @@ executable a34-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1500,7 +1466,6 @@ executable a35-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1543,7 +1508,6 @@ executable a36-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1586,7 +1550,6 @@ executable a37-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1629,7 +1592,6 @@ executable a38-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1672,7 +1634,6 @@ executable a39-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1715,7 +1676,6 @@ executable a40-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1758,7 +1718,6 @@ executable a41-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1801,7 +1760,6 @@ executable a42-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1844,7 +1802,6 @@ executable a43-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1887,7 +1844,6 @@ executable a44-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1930,7 +1886,6 @@ executable a45-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -1973,7 +1928,6 @@ executable a46-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2016,7 +1970,6 @@ executable a49-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2059,7 +2012,6 @@ executable a50-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2102,7 +2054,6 @@ executable a51-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2145,7 +2096,6 @@ executable a52-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2188,7 +2138,6 @@ executable a53-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2231,7 +2180,6 @@ executable a54-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2274,7 +2222,6 @@ executable a55-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2317,7 +2264,6 @@ executable a56-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2360,7 +2306,6 @@ executable a57-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2403,7 +2348,6 @@ executable a58-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2446,7 +2390,6 @@ executable a59-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2489,7 +2432,6 @@ executable a60-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2532,7 +2474,6 @@ executable a61-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2575,7 +2516,6 @@ executable a62-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2618,7 +2558,6 @@ executable a63-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2661,7 +2600,6 @@ executable a64-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2704,7 +2642,6 @@ executable a65-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2747,7 +2684,6 @@ executable a66-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2790,7 +2726,6 @@ executable a67-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2833,7 +2768,6 @@ executable a68-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2876,7 +2810,6 @@ executable a69-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2919,7 +2852,6 @@ executable a70-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -2962,7 +2894,6 @@ executable a71-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3005,7 +2936,6 @@ executable a72-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3048,7 +2978,6 @@ executable a73-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3091,7 +3020,6 @@ executable a74-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3134,7 +3062,6 @@ executable a75-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3177,7 +3104,6 @@ executable a76-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3220,7 +3146,6 @@ executable a77-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3263,7 +3188,6 @@ executable b01-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3306,7 +3230,6 @@ executable b02-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3349,7 +3272,6 @@ executable b03-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3392,7 +3314,6 @@ executable b04-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3435,7 +3356,6 @@ executable b06-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3478,7 +3398,6 @@ executable b07-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3521,7 +3440,6 @@ executable b08-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3564,7 +3482,6 @@ executable b09-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3607,7 +3524,6 @@ executable b11-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3650,7 +3566,6 @@ executable b12-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3693,7 +3608,6 @@ executable b13-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3736,7 +3650,6 @@ executable b14-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3779,7 +3692,6 @@ executable b16-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3822,7 +3734,6 @@ executable b17-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3865,7 +3776,6 @@ executable b18-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3908,7 +3818,6 @@ executable b19-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3951,7 +3860,6 @@ executable b20-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -3994,7 +3902,6 @@ executable b21-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4037,7 +3944,6 @@ executable b23-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4080,7 +3986,6 @@ executable b24-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4123,7 +4028,6 @@ executable b26-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4166,7 +4070,6 @@ executable b27-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4209,7 +4112,6 @@ executable b28-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4252,7 +4154,6 @@ executable b29-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4295,7 +4196,6 @@ executable b30-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4338,7 +4238,6 @@ executable b31-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4381,7 +4280,6 @@ executable b32-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4424,7 +4322,6 @@ executable b33-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4467,7 +4364,6 @@ executable b34-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4510,7 +4406,6 @@ executable b36-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4553,7 +4448,6 @@ executable b37-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4596,7 +4490,6 @@ executable b38-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4639,7 +4532,6 @@ executable b39-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4682,7 +4574,6 @@ executable b40-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4725,7 +4616,6 @@ executable b41-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4768,7 +4658,6 @@ executable b42-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4811,7 +4700,6 @@ executable b43-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4854,7 +4742,6 @@ executable b44-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4897,7 +4784,6 @@ executable b45-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4940,7 +4826,6 @@ executable b51-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -4983,7 +4868,6 @@ executable b52-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5026,7 +4910,6 @@ executable b54-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5069,7 +4952,6 @@ executable b55-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5112,7 +4994,6 @@ executable b56-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5155,7 +5036,6 @@ executable b57-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5198,7 +5078,6 @@ executable b58-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5241,7 +5120,6 @@ executable b59-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5284,7 +5162,6 @@ executable b61-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5327,7 +5204,6 @@ executable b62-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5370,7 +5246,6 @@ executable b63-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5413,7 +5288,6 @@ executable b64-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5456,7 +5330,6 @@ executable b65-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5499,7 +5372,6 @@ executable b66-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5542,7 +5414,6 @@ executable b67-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5585,7 +5456,6 @@ executable b68-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5628,7 +5498,6 @@ executable b69-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5671,7 +5540,6 @@ executable c01-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5714,7 +5582,6 @@ executable c02-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5757,7 +5624,6 @@ executable c03-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5800,7 +5666,6 @@ executable c04-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5843,7 +5708,6 @@ executable c05-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5886,7 +5750,6 @@ executable c06-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5929,7 +5792,6 @@ executable c07-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -5972,7 +5834,6 @@ executable c08-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6015,7 +5876,6 @@ executable c09-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6058,7 +5918,6 @@ executable c10-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6101,7 +5960,6 @@ executable c11-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6144,7 +6002,6 @@ executable c12-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6187,7 +6044,6 @@ executable c13-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6230,7 +6086,6 @@ executable c14-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6273,7 +6128,6 @@ executable c15-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6316,7 +6170,6 @@ executable c16-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6359,7 +6212,6 @@ executable c17-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6402,7 +6254,6 @@ executable c18-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6445,7 +6296,6 @@ executable c19-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random
@@ -6488,7 +6338,6 @@ executable c20-exe
     , psqueues
     , random
     , reflection
-    , repa
     , template-haskell
     , text
     , tf-random

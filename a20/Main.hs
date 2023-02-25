@@ -31,10 +31,10 @@ import Data.Array.Unsafe
 import qualified Data.Array as A
 import qualified Data.Array.Unboxed as AU
 
--- bytestring: https://www.stackage.org/lts-16.31/package/bytestring-0.10.10.0
+-- bytestring: https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0
 import qualified Data.ByteString.Char8 as BS
 
--- vector: https://www.stackage.org/lts-16.31/package/vector-0.12.1.2
+-- vector: https://www.stackage.org/lts-16.11/package/vector-0.12.1.2
 import qualified Data.Vector.Unboxed as VU
 
 {- ORMOLU_ENABLE -}

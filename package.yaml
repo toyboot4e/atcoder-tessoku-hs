@@ -24,7 +24,6 @@ dependencies:
    - psqueues
    - random
    - reflection
-   - repa
    - template-haskell
    - text
    - tf-random

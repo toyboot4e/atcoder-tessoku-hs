@@ -32,11 +32,11 @@ import Text.Printf
 
 {- ORMOLU_DISABLE -}
 
--- bytestring: https://www.stackage.org/lts-16.31/package/bytestring-0.10.10.0
+-- bytestring: https://www.stackage.org/lts-16.11/package/bytestring-0.10.10.0
 import qualified Data.ByteString.Builder as BSB
 import qualified Data.ByteString.Char8 as BS
 
--- vector: https://www.stackage.org/lts-16.31/package/vector-0.12.1.2
+-- vector: https://www.stackage.org/lts-16.11/package/vector-0.12.1.2
 import qualified Data.Vector.Unboxed as VU
 import qualified Data.Vector.Unboxed.Mutable as VUM
 import qualified Data.Vector as V
